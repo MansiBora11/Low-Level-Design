@@ -6,6 +6,5 @@ public class Main {
         Vehicle car=new Vehicle(VehicleType.CAR);
         parkingLot.parkVehicle(car);
         parkingLot.unparkVehicle(car);
-
     }
 }
