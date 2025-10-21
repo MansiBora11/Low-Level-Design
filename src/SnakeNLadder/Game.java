@@ -27,17 +27,17 @@ public class Game {
     public void startGame(){
         while(winner == null){
             Player playerTurn = findPlayerTurn();
-            System.out.println("Player turn is:" + playerTurn.id + " current position is: " + playerTurn.currentPosition);
+            System.out.println("Player turn is:" + playerTurn.playerId + " current position is: " + playerTurn.currPosition);
 
             int diceNumbers = dice.rollDice();
             int playerNewPosition= playerTurn.currPosition + diceNumbers;
             playerNewPosition = jumpCheck(playerNewPosition);
             playerTurn.currPosition=playerNewPosition;
-            System.out.println("Player turn is:"+playerTurn.id+"new position:"+playerNewPosition);
+            System.out.println("Player turn is:"+playerTurn.playerId+"new position:"+playerNewPosition);
             if(playerNewPosition >= board.cells.length * board.cells.length-1){
                 winner=playerTurn;
             }
-            System.out.println("WINNER IS:" + winner.id);
+            System.out.println("WINNER IS:" + winner.playerId);
         }
     }
     private Player findPlayerTurn() {
