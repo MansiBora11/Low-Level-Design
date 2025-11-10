@@ -1,0 +1,64 @@
+                    ┌──────────────────────────────┐
+                    │       ElevatorSystem          │
+                    ├──────────────────────────────┤
+                    │ - elevators: List<ElevatorCar>│
+                    ├──────────────────────────────┤
+                    │ + handleExternalRequest(req: ExternalRequest): void │
+                    └──────────────────────────────┘
+                                  │
+                                  │ contains multiple
+                                  ▼
+      ┌────────────────────────────────────────────┐
+      │               ElevatorCar                  │
+      ├────────────────────────────────────────────┤
+      │ - id: int                                 │
+      │ - currentFloor: int                       │
+      │ - direction: Direction                    │
+      │ - state: ElevatorState                    │
+      │ - upStops: PriorityQueue<Integer>         │
+      │ - downStops: PriorityQueue<Integer>       │
+      ├────────────────────────────────────────────┤
+      │ + addNewRequest(floor: int): void         │
+      │ + move(): void                            │
+      │ + getCurrentFloor(): int                  │
+      │ + getDirection(): Direction               │
+      └────────────────────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────
+
+      ┌────────────────────────────┐
+      │      ExternalRequest       │
+      ├────────────────────────────┤
+      │ - floor: int               │
+      │ - direction: Direction     │
+      ├────────────────────────────┤
+      │ + getFloor(): int          │
+      │ + getDirection(): Direction│
+      └────────────────────────────┘
+
+      ┌────────────────────────────┐
+      │      InternalRequest       │
+      ├────────────────────────────┤
+      │ - destinationFloor: int    │
+      ├────────────────────────────┤
+      │ + getDestinationFloor(): int│
+      └────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────
+
+      ┌────────────────────────────┐
+      │         Direction          │
+      ├────────────────────────────┤
+      │ + UP                       │
+      │ + DOWN                     │
+      │ + IDLE                     │
+      └────────────────────────────┘
+
+      ┌────────────────────────────┐
+      │       ElevatorState        │
+      ├────────────────────────────┤
+      │ + MOVING                   │
+      │ + IDLE                     │
+      │ + DOOR_OPEN                │
+      │ + DOOR_CLOSED              │
+      └────────────────────────────┘
