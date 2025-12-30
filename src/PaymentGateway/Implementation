@@ -11,3 +11,6 @@ Add a new payment method without changing existing code.
 
 ✅ Loose Coupling
 Gateway depends on interface, not implementation.
+
+The system uses the Strategy pattern to encapsulate different payment behaviors,
+and the Factory pattern to resolve the appropriate strategy at runtime based on the request

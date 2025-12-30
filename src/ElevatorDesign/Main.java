@@ -7,7 +7,7 @@ public class Main {
         ElevatorSystem system = new ElevatorSystem(Arrays.asList(e1, e2));
 
 
-// External requests
+      // External requests
         system.handleExternalRequest(new ExternalRequest(5, Direction.UP));
         system.handleExternalRequest(new ExternalRequest(2, Direction.DOWN));
 
