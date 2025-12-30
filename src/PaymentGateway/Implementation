@@ -1,0 +1,13 @@
+Payment Gateway is a classic example of Strategy Design Pattern.
+It has a context (Payment Gateway class) that enables selection of payment strategy at runtime.
+Payment Method is the strategy interface that declares a common pay method or set of algorithm execution techniques.
+
+Why this is GREAT design
+✅ Strategy Pattern
+Each payment type is a strategy.
+
+✅ Open/Closed Principle
+Add a new payment method without changing existing code.
+
+✅ Loose Coupling
+Gateway depends on interface, not implementation.

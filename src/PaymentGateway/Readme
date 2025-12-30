@@ -1,0 +1,18 @@
+
+Functional Requirements:
+
+Pay via:
+Credit Card
+UPI
+Net Banking
+
+Ability to:
+Initiate payment
+Process payment
+Get payment status (SUCCESS / FAILED / PENDING)
+
+Non-Functional Requirements:
+
+Scalable
+Extensible (add new payment methods easily)
+Thread-safe (multiple users paying at same time)
