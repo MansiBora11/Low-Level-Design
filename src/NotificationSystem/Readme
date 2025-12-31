@@ -1,0 +1,14 @@
+Requirements:
+
+Functional:
+
+1] Content type can be a string.
+2] Recipient is-
+   Email
+   SmsNotification
+   Push
+3] Actual sending logic will be mocked.
+4] Synchronous sending is fine
+
+
+
