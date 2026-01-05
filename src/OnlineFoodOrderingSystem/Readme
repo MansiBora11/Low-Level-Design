@@ -1,0 +1,7 @@
+Requirements
+
+A user can place an Order
+An Order contains multiple food items
+Each item has quantity & price at order time
+Order supports payment using different modes (UPI, Card, Wallet)
+Payment logic should be easily extendable
